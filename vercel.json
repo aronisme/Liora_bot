@@ -1,18 +1,12 @@
 {
-  "version": 2,
+  "version": 3,
   "functions": {
-    "api/*.ts": {
-      "runtime": "nodejs18.x"
+    "api/**/*.ts": {
+      "runtime": "vercel-node@3"
     }
   },
   "routes": [
-    {
-      "src": "/api/health",
-      "dest": "/api/health.ts"
-    },
-    {
-      "src": "/api/webhook",
-      "dest": "/api/webhook.ts"
-    }
+    { "src": "/api/health", "dest": "/api/health.ts" },
+    { "src": "/api/webhook", "dest": "/api/webhook.ts" }
   ]
 }
